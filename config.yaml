@@ -1,25 +1,21 @@
 cora:
-  seed: 39788
   learning_rate: 0.0005
   num_hidden: 128
   num_proj_hidden: 128
   activation: 'relu'
-  base_model: 'GCNConv'
   num_layers: 2
   drop_edge_rate_1: 0.2
   drop_edge_rate_2: 0.4
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
   tau: 0.4
-  num_epochs: 200
+  num_epochs: 400
   weight_decay: 0.00001
 citeseer:
-  seed: 38108
   learning_rate: 0.001
   num_hidden: 256
   num_proj_hidden: 256
   activation: 'prelu'
-  base_model: 'GCNConv'
   num_layers: 2
   drop_edge_rate_1: 0.2
   drop_edge_rate_2: 0.0
@@ -29,12 +25,10 @@ citeseer:
   num_epochs: 200
   weight_decay: 0.00001
 pubmed:
-  seed: 23344
   learning_rate: 0.001
   num_hidden: 256
   num_proj_hidden: 256
   activation: 'relu'
-  base_model: 'GCNConv'
   num_layers: 2
   drop_edge_rate_1: 0.4
   drop_edge_rate_2: 0.1
@@ -44,12 +38,10 @@ pubmed:
   num_epochs: 1500
   weight_decay: 0.00001
 dblp:
-  seed: 83521
   learning_rate: 0.001
   num_hidden: 256
   num_proj_hidden: 256
   activation: 'relu'
-  base_model: 'GCNConv'
   num_layers: 2
   drop_edge_rate_1: 0.1
   drop_edge_rate_2: 0.4
