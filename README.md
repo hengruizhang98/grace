@@ -28,8 +28,6 @@ This example was implemented by [Hengrui Zhang](https://github.com/hengruizhang9
 
 ## Arguments
 
-##### 	Node Classification:
-
 ```
 --dataname         str     The graph dataset name.                Default is 'cora'.
 --gpu              int     GPU index.                             Default is 0.
@@ -38,12 +36,7 @@ This example was implemented by [Hengrui Zhang](https://github.com/hengruizhang9
 
 ## How to run examples
 
-###### Node Classification
-
-For semi-supervised node classification on 'Cora', 'Citeseer' and 'Pubmed', we provide two implementations:
-
-1. full-graph training, see 'main.py', where we contrast the local and global representations of the whole graph.
-2. subgraph training, see 'main_sample.py', where we contrast the local and global representations of a sampled subgraph with fixed number of nodes.
+In the paper(as well as authors' repo), the training set and testing set are split randomly with 1:9 ratio. In order to fairly compare it with other models with public split, in this repo we also provide its results using public split. To run the examples, follow the following instructions.
 
 ```python
 # Cora with random split
@@ -59,9 +52,7 @@ replace 'cora' with 'citeseer' or 'pubmed' if you would like to run this example
 
 We use the same hyper-parameter settings as provided by the author, you can check config.yaml for detailed hyper-parameters for each dataset.
 
-##### Node classification :
-
-Random split
+Random split (Train/Test = 1:9)
 
 |      Dataset      | Cora | Citeseer | Pubmed |
 | :---------------: | :--: | :------: | :----: |
@@ -75,6 +66,4 @@ Public split
 | :-----------: | :--: | :------: | :----: |
 | Author's Code | 79.9 |   68.6   |  81.3  |
 |      DGL      | 80.1 |   68.9   |  81.2  |
-
-* We use the same hyper-parameters as the random split setting, so you might get better performance with this model by fine-tuning the hyper-parameters.
 
