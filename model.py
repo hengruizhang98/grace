@@ -71,8 +71,7 @@ class Grace(nn.Module):
         return s
 
     def get_loss(self, z1, z2):
-        # calculate SimCLR loss
-
+        # get SimCLR loss
         f = lambda x: th.exp(x / self.temp)
 
         refl_sim = f(self.sim(z1, z1))        # intra-view pairs
