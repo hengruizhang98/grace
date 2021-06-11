@@ -65,7 +65,7 @@ if __name__ == '__main__':
     wd = args.wd
 
     # Step 2: Prepare data =================================================================== =#
-    graph, feat, labels, num_class, train_mask, val_mask, test_mask = load(args.dataname)
+    graph, feat, labels, train_mask, test_mask = load(args.dataname)
     in_dim = feat.shape[1]
 
     # Step 3: Create model =================================================================== #
